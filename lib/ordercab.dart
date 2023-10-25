@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       theme: ThemeData(
         primarySwatch: Colors.deepOrange
       ),
@@ -47,6 +48,8 @@ class HomePage extends StatefulWidget {
   List<Marker> markers=[];
 
 var lat;
+var lat2;
+var lon2;
 var lon;
 var userid;
 var token;
@@ -566,17 +569,26 @@ TextEditingController src=TextEditingController();
                                    lon=finalan[i]["longtitude"];
                                    userid=finalan[i]["userid"];
                                    token=finalan[i]["token"];
+
+
                                  }
 
 
 
+
+
+
                                });
+                               lat2=lat;
+                               lon2=lon;
+
+
                                print("final cab min diistance coordinates ${lat} ${lon} ${userid} ${token}");
                                sendPushNotificationMessage(token, destination.text);
 
-
-
                            }
+
+                         print("LAT2 $lat2,lon2 $lon2");
 
 
 
@@ -623,19 +635,19 @@ TextEditingController src=TextEditingController();
 
 
 
-                              (lat==null && lon==null)?(MarkerLayer(
+                              (lat2==null && lon2==null)?(MarkerLayer(
                                 markers: [
                                   Marker(point: LatLng(0,0), builder: (context)=>Container())
                                 ],
 
                               )):(MarkerLayer(
                                 markers: [
-                                  Marker(point: LatLng(lat, lon), builder: (context)=>Container(
+                                  Marker(point: LatLng(lat2, lon2), builder: (context)=>Container(
                                     child: GestureDetector(
                                       onTap: (){
                                         print("Clicked the icon");
                                       },
-                                      child: Icon(Icons.add),
+                                      child: Icon(Icons.location_history),
                                     )
                                   )
 

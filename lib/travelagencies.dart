@@ -21,6 +21,7 @@ class _TravelListState extends State<TravelList> {
   Widget build(BuildContext context)
   {
     return MaterialApp(
+      debugShowCheckedModeBanner: false ,
       theme: ThemeData(
         primarySwatch: Colors.deepOrange
             
