@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "985589286445",
+    "project_id": "trackerapplication-8660c",
+    "storage_bucket": "trackerapplication-8660c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985589286445:android:75e0caef6382aa49385aa4",
+        "android_client_info": {
+          "package_name": "com.example.agencyconnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUNPISE3sAWH7vYHl6yskNl3K8fYKZ--8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
